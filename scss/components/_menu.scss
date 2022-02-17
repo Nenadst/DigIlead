@@ -1,0 +1,95 @@
+.menu {
+  padding: 7rem 0;
+
+  &__heading-box {
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0.1rem;
+      width: 5rem;
+      background-color: $color-gray;
+    }
+  }
+
+  &__heading {
+    font-family: $ff-lora;
+    font-size: 4rem;
+  }
+
+  &__row {
+    display: flex;
+    gap: 3rem;
+  }
+
+  &__wrap {
+    display: flex;
+    gap: 5rem;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-basis: 50%;
+    align-self: flex-start;
+
+    @include breakpoint(md) {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+
+  &__article {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 50%;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0.4rem;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px dotted $color-black;
+      z-index: -1;
+    }
+  }
+
+  &__article-desc {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  &__desc {
+    font-family: $ff-lora;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    background-color: $color-white;
+    margin-right: auto;
+  }
+
+  &__weight {
+    font-family: $ff-lora;
+    background-color: $color-white;
+  }
+
+  &__price {
+    font-family: $ff-lora;
+    background-color: $color-white;
+    text-align: end;
+    width: 6rem;
+    margin-left: 5rem;
+  }
+}

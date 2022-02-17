@@ -1,0 +1,307 @@
+.header {
+  background-image: linear-gradient(
+      rgba($color-lucky, 0.2),
+      rgba($color-lucky, 0)
+    ),
+    url(./../img/slider-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @include breakpoint(md) {
+    height: 100vh;
+  }
+
+  &__side-bgr {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  &__lang-box {
+    padding: 0.4rem 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__lang-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__lang {
+    display: flex;
+    margin-left: 0.1rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover .header__lang-img {
+      transform: scale(1.2);
+    }
+  }
+
+  &__lang-img {
+    max-width: 3rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  &__logo-box {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      z-index: 9;
+    }
+  }
+
+  &__logo {
+    max-width: 15rem;
+
+    @include breakpoint(md) {
+      max-width: 7rem;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20rem;
+
+    @include breakpoint(md) {
+      margin-top: 5rem;
+    }
+  }
+
+  &__heading {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 9.5rem;
+    line-height: 1.2;
+    color: #3777ff;
+    margin-bottom: 1.5rem;
+    mix-blend-mode: screen;
+
+    @include breakpoint(xl) {
+      font-size: 8rem;
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 6rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 4.2rem;
+    font-weight: 500;
+    color: $color-white;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(sm) {
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 2.1rem;
+    color: $color-white;
+    margin-bottom: 6rem;
+
+    @include breakpoint(xl) {
+      font-size: 1.8rem;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+
+  &__btn-box {
+    margin-bottom: 22rem;
+
+    @include breakpoint(md) {
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__menu-btn {
+    display: none;
+
+    @include breakpoint(md) {
+      display: flex;
+    }
+  }
+
+  &__svg-menu {
+    height: 3rem;
+    width: 3rem;
+    fill: $color-white;
+    display: none;
+
+    @include breakpoint(md) {
+      display: flex;
+    }
+  }
+
+  &__shape {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+    z-index: 2;
+    pointer-events: none;
+    transform: rotate(180deg);
+  }
+
+  &__svg-shape {
+    height: 100px;
+    transform: translateX(-50%) rotateY(180deg);
+    display: block;
+    width: calc(100% + 1.3px);
+    position: relative;
+    left: 50%;
+  }
+
+  &__shape-fill {
+    fill: $color-white;
+    transform-origin: center;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  ///////////////////Contact page ///////////////////
+
+  &__container-contact {
+    display: flex;
+    background-image: linear-gradient(rgb(3, 3, 3) 15%, rgba(3, 3, 3, 0.4) 100%),
+      url(./../img/kontakt-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+
+    @include breakpoint(xl) {
+      height: 100%;
+    }
+
+    @include breakpoint(md) {
+      height: 60vh;
+    }
+  }
+
+  &__box-left-contact {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 6vw;
+    padding-top: 4rem;
+    flex-basis: 45%;
+
+    @include breakpoint(sm) {
+      flex-basis: 80%;
+    }
+  }
+
+  &__box-right-contact {
+    @include breakpoint(md) {
+      display: flex;
+      justify-content: flex-end;
+      flex-basis: 20%;
+      padding: 6rem 5rem 0;
+    }
+
+    @include breakpoint(sm) {
+      padding: 5rem 3rem 0;
+    }
+  }
+
+  &__span-contact {
+    text-transform: uppercase;
+    color: $color-white;
+    position: relative;
+    margin: 10rem 0 3rem;
+
+    @include breakpoint(md) {
+      margin: 0 0 2rem;
+    }
+
+    @include breakpoint(md) {
+      margin: 3rem 0 2rem;
+    }
+  }
+
+  &__heading-contact {
+    font-family: $ff-bebas;
+    text-transform: uppercase;
+    font-size: 5rem;
+    color: $color-white;
+  }
+
+  ///////////////////About page ///////////////////
+
+  &__container-about {
+    display: flex;
+    background-image: linear-gradient(rgb(3, 3, 3) 15%, rgba(3, 3, 3, 0.4) 100%),
+      url(./../img/about.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+
+    @include breakpoint(xl) {
+      height: 100%;
+    }
+
+    @include breakpoint(md) {
+      height: 60vh;
+    }
+  }
+
+  ///////////////////Menu page ///////////////////
+
+  //   &__container-menu {
+  //     display: flex;
+  //     background-image: linear-gradient(rgb(3, 3, 3) 15%, rgba(3, 3, 3, 0.4) 100%),
+  //       url(./../img/menu-1.jpg);
+  //     background-position: center;
+  //     background-repeat: no-repeat;
+  //     background-size: cover;
+  //     height: 60vh;
+
+  //     @include breakpoint(xl) {
+  //       height: 100%;
+  //     }
+
+  //     @include breakpoint(md) {
+  //       height: 60vh;
+  //     }
+  //   }
+}

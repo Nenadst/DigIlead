@@ -1,0 +1,128 @@
+.footer {
+  background-color: #152644;
+  padding: 7rem 0 0;
+  position: relative;
+  overflow: hidden;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    z-index: 999;
+    margin-bottom: 8rem;
+
+    @include breakpoint(md) {
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include breakpoint(md) {
+      flex-basis: 47%;
+    }
+
+    @include breakpoint(sm) {
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    max-width: 20rem;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $color-light;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: #3777ff;
+    }
+
+    &:hover .footer__svg {
+      fill: #3777ff;
+    }
+  }
+
+  &__svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $color-light;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    color: $color-white;
+    margin-top: 3rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+
+    @include breakpoint(sm) {
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    text-decoration: none;
+
+    @include breakpoint(sm) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    color: $color-white;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: #3777ff;
+    }
+  }
+
+  &__copyright-box {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: transparent;
+    border-top: 1px solid $color-white;
+    width: 100%;
+  }
+
+  &__copyright {
+    color: $color-white;
+    font-size: 1.2rem;
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+  }
+}
