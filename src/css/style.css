@@ -555,7 +555,7 @@ h6 {
   .footer__container {
     display: flex;
     position: relative;
-    z-index: 999;
+    z-index: 1;
     margin-bottom: 8rem; }
     @media (max-width: 991px) {
       .footer__container {
@@ -889,19 +889,9 @@ h6 {
     @media (max-width: 991px) {
       .header__container-about {
         height: 60vh; } }
-  .header__container-menu {
-    display: flex;
-    background-image: linear-gradient(#030303 15%, rgba(3, 3, 3, 0.4) 100%), url(./../img/menu-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 60vh; }
-    @media (max-width: 1440px) {
-      .header__container-menu {
-        height: 100%; } }
-    @media (max-width: 991px) {
-      .header__container-menu {
-        height: 60vh; } }
+
+.lock-scroll {
+  overflow: hidden !important; }
 
 .location {
   padding: 8rem 0;
@@ -1320,7 +1310,7 @@ h6 {
     display: flex;
     padding: 3rem 0;
     position: relative;
-    z-index: 2; }
+    z-index: 1; }
     @media (max-width: 768px) {
       .specialty__content {
         flex-direction: column;

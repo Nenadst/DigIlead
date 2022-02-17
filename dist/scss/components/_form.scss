@@ -1,0 +1,74 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  &__wrap {
+    display: flex;
+    gap: 2rem;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__row-half {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-basis: 50%;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__label {
+    font-family: $ff-lora;
+    font-size: 1.8rem;
+  }
+
+  &__input {
+    background-color: $color-smoke;
+    border: 1px solid $color-smoke;
+    height: 5rem;
+    padding: 0 1.5rem;
+
+    &--date {
+      cursor: pointer;
+    }
+  }
+
+  &__textarea {
+    background-color: $color-smoke;
+    border: 1px solid $color-smoke;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    color: $color-black;
+    background-color: $color-white;
+    border: 1px solid $color-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    align-self: flex-start;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-black;
+    }
+  }
+
+  &__map {
+    flex-basis: 60%;
+    height: 50rem;
+  }
+}
