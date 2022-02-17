@@ -555,7 +555,7 @@ h6 {
   .footer__container {
     display: flex;
     position: relative;
-    z-index: 999;
+    z-index: 1;
     margin-bottom: 8rem; }
     @media (max-width: 991px) {
       .footer__container {
@@ -889,6 +889,9 @@ h6 {
     @media (max-width: 991px) {
       .header__container-about {
         height: 60vh; } }
+
+.lock-scroll {
+  overflow: hidden !important; }
 
 .location {
   padding: 8rem 0;
@@ -1307,7 +1310,7 @@ h6 {
     display: flex;
     padding: 3rem 0;
     position: relative;
-    z-index: 2; }
+    z-index: 1; }
     @media (max-width: 768px) {
       .specialty__content {
         flex-direction: column;

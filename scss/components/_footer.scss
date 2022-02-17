@@ -16,7 +16,7 @@
   &__container {
     display: flex;
     position: relative;
-    z-index: 999;
+    z-index: 1;
     margin-bottom: 8rem;
 
     @include breakpoint(md) {
