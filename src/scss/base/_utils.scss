@@ -1,0 +1,49 @@
+.container {
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @include breakpoint(xxl) {
+    max-width: 144rem;
+  }
+
+  @include breakpoint(xl) {
+    max-width: 120rem;
+  }
+
+  @include breakpoint(lg) {
+    max-width: 96rem;
+  }
+
+  @include breakpoint(md) {
+    max-width: 72rem;
+  }
+
+  @include breakpoint(sm) {
+    max-width: 54rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.m-top-1 {
+  margin-top: 1rem;
+
+  @include breakpoint(lg) {
+    margin-top: 3rem;
+  }
+}
+
+.m-top-3 {
+  margin-top: 3rem;
+}
+
+.m-top-5 {
+  margin-top: 5rem;
+}
+
+.m-top-6 {
+  margin-top: 6rem;
+}

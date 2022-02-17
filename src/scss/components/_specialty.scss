@@ -1,0 +1,108 @@
+.specialty {
+  background-image: url(./../img/specialty-background.jpg);
+  position: relative;
+  padding: 9rem 0px 9rem;
+  background-attachment: fixed;
+  background-size: cover;
+
+  @include breakpoint(md) {
+    padding: 3rem 0;
+  }
+
+  @include breakpoint(sm) {
+    padding: 0 0 5rem;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.7;
+    background-color: #152644;
+  }
+
+  &__background {
+    background-image: url(./../img/specialty-dots.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: repeat;
+  }
+
+  &__content {
+    display: flex;
+    padding: 3rem 0;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  &__card-center {
+    flex-basis: 33.33333%;
+  }
+
+  &__card {
+    flex-basis: 33.33333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 8rem 0;
+    border-right: 7px solid $color-white;
+    border-left: 7px solid $color-white;
+
+    @include breakpoint(md) {
+      padding: 3rem 0;
+    }
+
+    @include breakpoint(sm) {
+      border-right: none;
+      border-left: none;
+      border-top: 7px solid $color-white;
+      border-bottom: 7px solid $color-white;
+    }
+  }
+
+  &__heading {
+    font-size: 5rem;
+    font-weight: 600;
+    color: $color-white;
+
+    @include breakpoint(md) {
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+
+  &__img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -3rem;
+  }
+
+  &__img-left {
+    width: 75%;
+    filter: brightness(1812%) contrast(147%) saturate(116%) blur(0px)
+      hue-rotate(217deg);
+  }
+
+  &__img-right {
+    width: 33%;
+    filter: brightness(1515%) contrast(66%) saturate(0%) blur(0px)
+      hue-rotate(328deg);
+  }
+}

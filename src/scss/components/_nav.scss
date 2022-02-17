@@ -1,0 +1,141 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint(md) {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    transform: translateX(100%);
+    background-color: $color-lucky;
+    transition: transform 0.3s ease-in-out;
+    padding: 6.5rem 5rem 0;
+    z-index: 99999999999;
+  }
+
+  @include breakpoint(sm) {
+    padding: 5rem 3rem 0;
+  }
+
+  &__close-btn {
+    display: none;
+
+    @include breakpoint(md) {
+      display: flex;
+      align-self: flex-end;
+    }
+  }
+
+  &__svg-close {
+    height: 3rem;
+    width: 3rem;
+    fill: $color-white;
+  }
+
+  &__visible {
+    transform: translate(0);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      width: 100%;
+      height: 100%;
+    }
+
+    @include breakpoint(sm) {
+      justify-content: flex-start;
+      margin-top: 5rem;
+    }
+  }
+
+  &__item {
+    list-style: none;
+
+    @include breakpoint(md) {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 5rem;
+
+      @include breakpoint(md) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-gray;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      color: $color-white;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &__active {
+    color: $color-white;
+
+    @include breakpoint(md) {
+      background-color: #3777ff;
+    }
+  }
+
+  &__btn {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $color-lucky;
+    background-color: rgba($color-white, $alpha: 0.74);
+    border: 1px solid transparent;
+    border-radius: 0.6rem;
+    padding: 1.2rem 2.8rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-lucky;
+      border: 1px solid $color-white;
+    }
+  }
+
+  &__logo-box {
+    display: none;
+
+    @include breakpoint(md) {
+      display: flex;
+      position: absolute;
+      top: 7%;
+      left: 7%;
+    }
+
+    @include breakpoint(sm) {
+      display: flex;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 100%;
+    }
+  }
+}
