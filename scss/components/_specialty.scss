@@ -40,14 +40,55 @@
     position: relative;
     z-index: 1;
 
+    @include breakpoint(xxl) {
+      gap: 3rem;
+    }
+
+    @include breakpoint(xl) {
+      align-items: center;
+      gap: 5rem;
+    }
+
     @include breakpoint(sm) {
       flex-direction: column;
-      gap: 2rem;
+      gap: 4rem;
     }
   }
 
   &__card-center {
-    flex-basis: 33.33333%;
+    flex-basis: 35%;
+
+    @include breakpoint(xxl) {
+      flex-basis: 30%;
+    }
+
+    @include breakpoint(xl) {
+      flex-basis: 50%;
+    }
+
+    @include breakpoint(md) {
+      flex-basis: 35%;
+    }
+  }
+
+  &__card-wrap {
+    flex-basis: 65%;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(xxl) {
+      flex-basis: 70%;
+    }
+
+    @include breakpoint(xl) {
+      flex-wrap: wrap;
+      gap: 3rem;
+      flex-basis: 50%;
+    }
+
+    @include breakpoint(md) {
+      flex-basis: 65%;
+    }
   }
 
   &__card {
@@ -55,9 +96,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include breakpoint(xl) {
+      flex-basis: 45%;
+    }
   }
 
-  &__card-wrap {
+  &__heading-box {
     display: flex;
     justify-content: center;
     padding: 8rem 0;
@@ -88,21 +133,16 @@
   }
 
   &__img-box {
+    background-color: rgba(255, 255, 255, 0.705);
+    height: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: -3rem;
+    padding: 2rem;
+    border-radius: 1rem;
   }
 
-  &__img-left {
-    width: 75%;
-    filter: brightness(1812%) contrast(147%) saturate(116%) blur(0px)
-      hue-rotate(217deg);
-  }
-
-  &__img-right {
-    width: 33%;
-    filter: brightness(1515%) contrast(66%) saturate(0%) blur(0px)
-      hue-rotate(328deg);
+  &__img {
+    max-width: 18rem;
   }
 }

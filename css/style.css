@@ -1311,28 +1311,62 @@ h6 {
     padding: 3rem 0;
     position: relative;
     z-index: 1; }
+    @media (max-width: 1600px) {
+      .specialty__content {
+        gap: 3rem; } }
+    @media (max-width: 1440px) {
+      .specialty__content {
+        align-items: center;
+        gap: 5rem; } }
     @media (max-width: 768px) {
       .specialty__content {
         flex-direction: column;
-        gap: 2rem; } }
+        gap: 4rem; } }
   .specialty__card-center {
-    flex-basis: 33.33333%; }
+    flex-basis: 35%; }
+    @media (max-width: 1600px) {
+      .specialty__card-center {
+        flex-basis: 30%; } }
+    @media (max-width: 1440px) {
+      .specialty__card-center {
+        flex-basis: 50%; } }
+    @media (max-width: 991px) {
+      .specialty__card-center {
+        flex-basis: 35%; } }
+  .specialty__card-wrap {
+    flex-basis: 65%;
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 1600px) {
+      .specialty__card-wrap {
+        flex-basis: 70%; } }
+    @media (max-width: 1440px) {
+      .specialty__card-wrap {
+        flex-wrap: wrap;
+        gap: 3rem;
+        flex-basis: 50%; } }
+    @media (max-width: 991px) {
+      .specialty__card-wrap {
+        flex-basis: 65%; } }
   .specialty__card {
     flex-basis: 33.33333%;
     display: flex;
     justify-content: center;
     align-items: center; }
-  .specialty__card-wrap {
+    @media (max-width: 1440px) {
+      .specialty__card {
+        flex-basis: 45%; } }
+  .specialty__heading-box {
     display: flex;
     justify-content: center;
     padding: 8rem 0;
     border-right: 7px solid #fff;
     border-left: 7px solid #fff; }
     @media (max-width: 991px) {
-      .specialty__card-wrap {
+      .specialty__heading-box {
         padding: 3rem 0; } }
     @media (max-width: 768px) {
-      .specialty__card-wrap {
+      .specialty__heading-box {
         border-right: none;
         border-left: none;
         border-top: 7px solid #fff;
@@ -1346,13 +1380,12 @@ h6 {
         font-size: 3rem;
         text-align: center; } }
   .specialty__img-box {
+    background-color: rgba(255, 255, 255, 0.705);
+    height: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: -3rem; }
-  .specialty__img-left {
-    width: 75%;
-    filter: brightness(1812%) contrast(147%) saturate(116%) blur(0px) hue-rotate(217deg); }
-  .specialty__img-right {
-    width: 33%;
-    filter: brightness(1515%) contrast(66%) saturate(0%) blur(0px) hue-rotate(328deg); }
+    padding: 2rem;
+    border-radius: 1rem; }
+  .specialty__img {
+    max-width: 18rem; }
