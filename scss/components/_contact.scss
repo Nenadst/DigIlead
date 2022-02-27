@@ -1,9 +1,21 @@
 .contact {
   padding: 8rem 0 0;
 
+  &__heading-box {
+    margin-bottom: 5rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+  }
+
   &__content {
     display: flex;
     gap: 5rem;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
   }
 
   &__form-wrap {
@@ -12,6 +24,10 @@
     background-color: #152644;
     border-radius: 0.6rem;
     box-shadow: 0 10px 30px 0 rgba(208, 216, 234, 35%);
+
+    @include breakpoint(lg) {
+      flex-basis: 65%;
+    }
 
     @include breakpoint(md) {
       width: 100%;
@@ -24,6 +40,54 @@
 
   &__contact-wrap {
     flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoint(lg) {
+      flex-basis: 35%;
+    }
+  }
+
+  &__title {
+    font-size: 3.4rem;
+    color: $color-lucky;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    color: $color-lucky;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    color: $color-lucky;
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    color: $color-lucky;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: lighten($color-lucky, 50%);
+    }
+  }
+
+  &__svg {
+    height: 6rem;
+    width: 6rem;
+    fill: $color-lucky;
   }
 
   &__map {
