@@ -770,10 +770,10 @@ h6 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 20rem; }
+    margin-top: 12rem; }
     @media (max-width: 991px) {
       .header__wrap {
-        margin-top: 5rem; } }
+        margin-top: 15rem; } }
   .header__heading {
     font-weight: bold;
     text-transform: capitalize;
@@ -790,10 +790,13 @@ h6 {
       .header__heading {
         font-size: 6rem; } }
   .header__subtitle {
-    font-size: 4.2rem;
+    font-size: 5.2rem;
     font-weight: 500;
     color: #fff;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
     @media (max-width: 768px) {
       .header__subtitle {
         font-size: 3rem;
@@ -810,7 +813,7 @@ h6 {
         font-size: 1.6rem;
         text-align: center; } }
   .header__btn-box {
-    margin: 4rem 0 22rem; }
+    margin: 4rem 0 30rem; }
     @media (max-width: 991px) {
       .header__btn-box {
         margin-bottom: 8rem; } }

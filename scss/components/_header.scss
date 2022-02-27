@@ -91,10 +91,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 20rem;
+    margin-top: 12rem;
 
     @include breakpoint(md) {
-      margin-top: 5rem;
+      margin-top: 15rem;
     }
   }
 
@@ -118,10 +118,13 @@
   }
 
   &__subtitle {
-    font-size: 4.2rem;
+    font-size: 5.2rem;
     font-weight: 500;
     color: $color-white;
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
     @include breakpoint(sm) {
       font-size: 3rem;
@@ -145,7 +148,7 @@
   }
 
   &__btn-box {
-    margin: 4rem 0 22rem;
+    margin: 4rem 0 30rem;
 
     @include breakpoint(md) {
       margin-bottom: 8rem;
