@@ -45,12 +45,20 @@
     font-weight: 600;
     color: $color-lucky;
     margin-bottom: 2rem;
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
   }
 
   &__card-text {
     font-size: 2rem;
     color: $color-lucky;
     line-height: 1.6;
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
   }
 
   &__content {
