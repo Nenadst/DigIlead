@@ -72,24 +72,19 @@
     align-items: center;
     // background-color: rgba($color-white, 0.2);
 
-    @include breakpoint(sm) {
-      position: absolute;
-      top: 5%;
-      left: 5%;
-      z-index: 9;
-    }
-  }
-  &__logo-box2 {
-    display: flex;
-    align-items: center;
-    background-color: rgba($color-lucky, 0.2);
+    // @include breakpoint(sm) {
+    //   position: absolute;
+    //   top: 5%;
+    //   left: 5%;
+    //   z-index: 9;
+    // }
   }
 
   &__logo {
     max-width: 15rem;
 
     @include breakpoint(md) {
-      max-width: 7rem;
+      max-width: 10rem;
     }
   }
 
