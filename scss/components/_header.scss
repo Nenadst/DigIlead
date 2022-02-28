@@ -70,6 +70,7 @@
   &__logo-box {
     display: flex;
     align-items: center;
+    // background-color: rgba($color-white, 0.2);
 
     @include breakpoint(sm) {
       position: absolute;
@@ -77,6 +78,11 @@
       left: 5%;
       z-index: 9;
     }
+  }
+  &__logo-box2 {
+    display: flex;
+    align-items: center;
+    background-color: rgba($color-lucky, 0.2);
   }
 
   &__logo {
