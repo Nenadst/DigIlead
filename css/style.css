@@ -1197,8 +1197,8 @@ h6 {
     .nav__dropdown-link:hover {
       color: #fff; }
   .nav__arrow {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 2rem;
     fill: #a0a0a0;
     transition: all 0.3s ease-in-out; }
   .nav__logo-box {
