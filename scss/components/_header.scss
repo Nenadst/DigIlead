@@ -81,10 +81,10 @@
   }
 
   &__logo {
-    max-width: 15rem;
+    max-width: 18rem;
 
     @include breakpoint(md) {
-      max-width: 10rem;
+      max-width: 15rem;
     }
   }
 
