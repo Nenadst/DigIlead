@@ -62,6 +62,7 @@
 
   &__item {
     list-style: none;
+    position: relative;
 
     @include breakpoint(md) {
       width: 100%;
@@ -74,10 +75,25 @@
         margin-right: 0;
       }
     }
+
+    &:hover .nav__dropdown {
+      opacity: 1;
+    }
+
+    &:hover .nav__link {
+      color: $color-white;
+    }
+
+    &:hover .nav__arrow {
+      fill: $color-white;
+    }
   }
 
   &__link {
     color: $color-gray;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     transition: all 0.3s ease-in-out;
 
     @include breakpoint(md) {
@@ -92,6 +108,10 @@
     &:hover {
       color: $color-white;
     }
+
+    &:hover .nav__arrow {
+      fill: $color-white;
+    }
   }
 
   &__active {
@@ -102,22 +122,36 @@
     }
   }
 
-  &__btn {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    line-height: 1;
-    color: $color-lucky;
-    background-color: rgba($color-white, $alpha: 0.74);
-    border: 1px solid transparent;
-    border-radius: 0.6rem;
-    padding: 1.2rem 2.8rem;
+  &__dropdown {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba($color-lucky, 0.3);
+    border-top: 2px solid $color-white;
+    width: 24rem;
+    padding: 1rem;
+    position: absolute;
+    top: 120%;
+    left: -20%;
+    gap: 1.5rem;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__dropdown-link {
+    color: $color-gray;
     transition: all 0.3s ease-in-out;
 
     &:hover {
       color: $color-white;
-      background-color: $color-lucky;
-      border: 1px solid $color-white;
     }
+  }
+
+  &__arrow {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: $color-gray;
+    transition: all 0.3s ease-in-out;
   }
 
   &__logo-box {
