@@ -6,7 +6,6 @@
   color: $color-white;
   border-radius: 0.6rem;
   padding: 1.5rem 3rem;
-  margin-top: 4rem;
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
@@ -36,5 +35,21 @@
     width: 1.7rem;
     fill: $color-white;
     transition: all 0.3s ease-in-out;
+  }
+
+  &__gold {
+    color: $color-white;
+    background-color: $color-golden;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.6rem;
+    padding: 1.5rem 5rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-white;
+      background-color: darken($color-golden, $amount: 10%);
+    }
   }
 }

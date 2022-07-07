@@ -1,119 +1,97 @@
 .contact {
-  padding: 8rem 0;
+  padding: 8rem 0 0;
 
-  &__container {
+  &__heading-box {
+    margin-bottom: 5rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+  }
+
+  &__content {
     display: flex;
     gap: 5rem;
-    margin-bottom: 8rem;
 
-    @include breakpoint(sm) {
-      flex-direction: column-reverse;
+    @include breakpoint(md) {
+      flex-direction: column;
     }
   }
 
-  &__left-box {
-    flex-basis: 35%;
+  &__form-wrap {
+    flex-basis: 50%;
+    padding: 3rem 4rem;
+    background-color: #152644;
+    border-radius: 0.6rem;
+    box-shadow: 0 10px 30px 0 rgba(208, 216, 234, 35%);
+
+    @include breakpoint(lg) {
+      flex-basis: 65%;
+    }
+
+    @include breakpoint(md) {
+      width: 100%;
+    }
+
+    @include breakpoint(sm) {
+      padding: 3rem;
+    }
   }
 
-  &__img-box {
-    margin-bottom: 3rem;
-  }
+  &__contact-wrap {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
-  &__desc {
-    font-family: $ff-lora;
-    font-size: 1.8rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
+    @include breakpoint(lg) {
+      flex-basis: 35%;
+    }
   }
 
   &__title {
-    text-transform: uppercase;
-    font-size: 3.2rem;
-    font-family: $ff-bebas;
+    font-size: 3.4rem;
+    color: $color-lucky;
     margin-bottom: 3rem;
-    position: relative;
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    color: $color-lucky;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    color: $color-lucky;
   }
 
   &__link {
-    color: $color-black;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    color: $color-lucky;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      color: lighten($color-black, 30%);
-    }
-
-    &:hover .contact__svg {
-      fill: lighten($color-black, 30%);
+      color: lighten($color-lucky, 50%);
     }
   }
 
   &__svg {
-    height: 2rem;
-    width: 2rem;
+    height: 6rem;
+    width: 6rem;
+    fill: $color-lucky;
   }
 
-  &__social-box {
+  &__map {
     display: flex;
-    gap: 2rem;
-  }
-
-  &__social {
-    background-color: $color-black;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4.5rem;
-    width: 4.5rem;
-    border: 1px solid transparent;
-    position: relative;
-    transition: all 0.3 ease-in-out;
-
-    &:hover {
-      background-color: $color-white;
-      border: 1px solid $color-black;
-    }
-
-    &:hover .contact__svg-social {
-      fill: $color-black;
-    }
-
-    &:hover .contact__tooltip {
-      opacity: 1;
-      transform: translate(-50%, 0);
-    }
-  }
-
-  &__svg-social {
-    height: 1.5rem;
-    width: 1.5rem;
-    fill: $color-white;
-    transition: all 0.3s ease-in-out;
-  }
-
-  &__tooltip {
-    font-size: 1.2rem;
-    color: $color-gray;
-    background-color: $color-black;
-    position: absolute;
-    bottom: 105%;
-    left: 50%;
-    border-radius: 10%;
-    padding: 0.5rem;
-    transform: translate(-50%, 50%);
-    opacity: 0;
-    transition: all 0.3s ease-in;
-  }
-
-  &__right-box {
-    flex-basis: 65%;
-
-    @include breakpoint(sm) {
-      margin-bottom: 5rem;
-    }
+    margin-top: 5rem;
   }
 }

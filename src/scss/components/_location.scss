@@ -62,6 +62,12 @@
     }
   }
 
+  &__row {
+    @include breakpoint(md) {
+      text-align: center;
+    }
+  }
+
   &__text {
     font-size: 1.5rem;
     color: $color-lucky;
@@ -101,54 +107,6 @@
 
     @include breakpoint(sm) {
       padding: 3rem;
-    }
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-  }
-
-  &__form-row {
-    display: flex;
-    gap: 2rem;
-
-    @include breakpoint(sm) {
-      flex-direction: column;
-    }
-  }
-
-  &__input {
-    height: 5rem;
-    width: 100%;
-    padding: 1.2rem;
-    color: $color-dim-gray;
-    background-color: $color-snow;
-    border: none;
-    border-radius: 0.2rem;
-  }
-
-  &__textarea {
-    font-family: $ff-sans;
-    padding: 1.2rem;
-    color: $color-dim-gray;
-    background-color: $color-snow;
-    border: none;
-    border-radius: 0.2rem;
-    height: 12rem;
-  }
-
-  &__btn {
-    font-family: $ff-sans;
-    border: none;
-    height: 5rem;
-    width: 19rem;
-    justify-content: center;
-
-    @include breakpoint(sm) {
-      width: 100%;
     }
   }
 }

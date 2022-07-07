@@ -14,35 +14,27 @@ hamburger_close_btn.addEventListener("click", () => {
   });
 });
 
-////////////////////////////////Remove HOVER on mobile/////////////////////////////////////////////
+const links = document.querySelectorAll(".navbar-link .btn-dropdown");
+const dropdown = document.querySelectorAll(".navbar-link ul");
 
-function hasTouch() {
-  return (
-    "ontouchstart" in document.documentElement ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0
-  );
-}
+dropdown.forEach((element) => {
+  const height = element.offsetHeight;
+  element.style.marginTop = `${-height}px`;
+});
 
-if (hasTouch()) {
-  // remove all the :hover stylesheets
-  try {
-    // prevent exception on browsers not supporting DOM styleSheets properly
-    for (var si in document.styleSheets) {
-      var styleSheet = document.styleSheets[si];
-      if (!styleSheet.rules) continue;
+//////////////////////////////Dropdown TEST ////////////////////////////////
+links.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const target = e.currentTarget;
+    const ele = target.nextElementSibling;
 
-      for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-        if (!styleSheet.rules[ri].selectorText) continue;
-
-        if (styleSheet.rules[ri].selectorText.match(":hover")) {
-          styleSheet.deleteRule(ri);
-        }
+    dropdown.forEach((element) => {
+      if (element !== ele) {
+        element.previousElementSibling.classList.remove("active");
+        element.classList.remove("dropdown");
       }
-    }
-  } catch (ex) {}
-}
-
-function disableHover() {
-  document.body.classList.remove("hasHover");
-}
+    });
+    target.classList.toggle("active");
+    ele.classList.toggle("dropdown");
+  });
+});

@@ -1,93 +1,181 @@
 .about {
+  &__background-img {
+    background-image: linear-gradient(
+        rgba($color-lucky, 0.5),
+        rgba($color-lucky, 0)
+      ),
+      url(./../img/about-bgr1.png);
+    filter: brightness(80%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+
   &__wrap {
-    background-color: $color-black;
-  }
-
-  &__top-wrap {
+    padding: 7rem 0;
     display: flex;
-    gap: 10rem;
-    padding: 10rem 0;
-
-    @include breakpoint(sm) {
-      flex-direction: column;
-      gap: 5rem;
-      padding: 5rem 0;
-    }
-  }
-
-  &__top-title {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.4rem;
-    color: $color-white;
-    margin-bottom: 3rem;
-  }
-
-  &__top-desc {
-    font-family: $ff-lora;
-    line-height: 1.8;
-    font-size: 1.8rem;
-    color: $color-smoke;
-  }
-
-  &__top-content {
-    display: flex;
+    justify-content: center;
     gap: 3rem;
 
     @include breakpoint(lg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    flex-basis: 25%;
+    padding: 5rem 3rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 24px 0px rgba(1, 44, 118, 0.144);
+
+    @include breakpoint(xxl) {
+      flex-basis: 30%;
+    }
+
+    @include breakpoint(lg) {
+      flex-basis: 48%;
+    }
+
+    @include breakpoint(md) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__card-title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: $color-lucky;
+    margin-bottom: 2rem;
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+  }
+
+  &__card-text {
+    font-size: 2rem;
+    color: $color-lucky;
+    line-height: 1.6;
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin-bottom: 5rem;
+
+    @include breakpoint(lg) {
+      flex-direction: column-reverse;
+      gap: 3rem;
+    }
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: $color-lucky;
+    align-self: flex-start;
+
+    @include breakpoint(lg) {
+      align-self: center;
+    }
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+  }
+
+  &__content-card {
+    @include breakpoint(lg) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
     }
   }
 
-  &__top-text-box {
-    flex-basis: 30%;
+  &__subtitle {
+    font-size: 2.4rem;
+    color: $color-lucky;
+    margin-bottom: 2rem;
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
   }
 
-  &__top-text {
-    font-family: $ff-lora;
-    line-height: 1.8;
-    font-size: 1.8rem;
-    color: $color-smoke;
-  }
-
-  &__top-img-box {
-    flex-basis: 70%;
-  }
-
-  &__mid-box {
-    padding: 10rem 0;
-  }
-
-  &__mid-text {
-    font-family: $ff-lora;
-    line-height: 1.8;
-    font-size: 1.8rem;
-  }
-
-  &__bottom-box {
-    background-color: $color-black;
-    padding-top: 10rem;
-  }
-
-  &__bottom-card {
+  &__text-box {
+    flex-basis: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 8rem;
+    gap: 1rem;
+    padding: 0 3rem 3rem;
+
+    @include breakpoint(sm) {
+      gap: 3rem;
+    }
   }
 
-  &__bottom-title {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.4rem;
-    color: $color-white;
-    margin-bottom: 3rem;
+  &__text {
+    color: $color-lucky;
+
+    @include breakpoint(lg) {
+      text-align: center;
+    }
   }
 
-  &__bottom-desc {
-    font-family: $ff-lora;
-    line-height: 1.8;
-    font-size: 1.8rem;
-    color: $color-smoke;
+  &__img-box {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__info-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 8rem 0;
+
+    @include breakpoint(lg) {
+      padding: 5rem 0;
+    }
+
+    @include breakpoint(md) {
+      padding: 0 0 5rem;
+    }
+  }
+
+  &__info-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    padding: 3rem;
+    box-shadow: 0px 0px 24px 0px rgba(1, 44, 118, 0.144);
+
+    @include breakpoint(md) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  &__info-title {
+    @include breakpoint(sm) {
+      text-align: center;
+    }
   }
 }

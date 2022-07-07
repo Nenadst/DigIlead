@@ -4,19 +4,10 @@
   position: relative;
   overflow: hidden;
 
-  &__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.1;
-  }
-
   &__container {
     display: flex;
     position: relative;
-    z-index: 999;
+    z-index: 1;
     margin-bottom: 8rem;
 
     @include breakpoint(md) {

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,200&family=Fira+Sans:ital,wght@0,100;1,100&family=Poppins:wght@400;500;600;700;800&display=swap");
+
 @import "./abstracts/mixins";
 @import "./abstracts/variables";
 
@@ -8,27 +10,31 @@
 @import "./base/utils";
 
 @import "./components/about";
+@import "./components/account";
 @import "./components/button";
 @import "./components/contact";
 @import "./components/features";
 @import "./components/footer";
 @import "./components/form";
-@import "./components/gallery";
 @import "./components/header";
 @import "./components/location";
 @import "./components/meal";
-@import "./components/menu";
+@import "./components/telemarketing";
+@import "./components/market";
 @import "./components/nav";
+@import "./components/sales";
+@import "./components/services";
 @import "./components/specialty";
+@import "./components/swiper";
 
-// @import "./../../node_modules/bootstrap/scss/functions";
-// @import "./../../node_modules/bootstrap/scss/variables";
-// @import "./../../node_modules/bootstrap/scss/mixins";
-// @import "./../../node_modules/bootstrap/scss/root";
-// @import "./../../node_modules/bootstrap/scss/reboot";
-// @import "./../../node_modules/bootstrap/scss/dropdown";
+@import "./../../node_modules/bootstrap/scss/functions";
+@import "./../../node_modules/bootstrap/scss/variables";
+@import "./../../node_modules/bootstrap/scss/mixins";
+@import "./../../node_modules/bootstrap/scss/root";
+@import "./../../node_modules/bootstrap/scss/reboot";
+@import "./../../node_modules/bootstrap/scss/dropdown";
 // @import "./../../node_modules/bootstrap/scss/navbar";
-// @import "./../../node_modules/bootstrap/scss/transitions";
+@import "./../../node_modules/bootstrap/scss/transitions";
 // @import "./../../node_modules/bootstrap/scss/breadcrumb";
 // @import "./../../node_modules/bootstrap/scss/pagination";
 // @import "./../../node_modules/bootstrap/scss/nav";

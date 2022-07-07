@@ -14,12 +14,9 @@
     transform: translateX(100%);
     background-color: $color-lucky;
     transition: transform 0.3s ease-in-out;
-    padding: 6.5rem 5rem 0;
+    padding: 6.5rem 2rem 0 2rem;
+    overflow-y: auto;
     z-index: 99999999999;
-  }
-
-  @include breakpoint(sm) {
-    padding: 5rem 3rem 0;
   }
 
   &__close-btn {
@@ -28,6 +25,9 @@
     @include breakpoint(md) {
       display: flex;
       align-self: flex-end;
+      position: absolute;
+      top: 7%;
+      right: 5%;
     }
   }
 
@@ -44,6 +44,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     @include breakpoint(md) {
       flex-direction: column;
@@ -62,22 +63,47 @@
 
   &__item {
     list-style: none;
+    position: relative;
+    padding-bottom: 1rem;
 
     @include breakpoint(md) {
       width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
 
     &:not(:last-child) {
-      margin-right: 5rem;
+      margin-left: 5rem;
 
       @include breakpoint(md) {
-        margin-right: 0;
+        margin-left: 0;
       }
+    }
+
+    &:hover .nav__dropdown {
+      display: flex;
+      opacity: 1;
+
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+
+    &:hover .nav__link {
+      color: $color-white;
+    }
+
+    &:hover .nav__arrow {
+      fill: $color-white;
     }
   }
 
   &__link {
-    color: $color-gray;
+    color: $color-gray-light;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     transition: all 0.3s ease-in-out;
 
     @include breakpoint(md) {
@@ -86,11 +112,53 @@
       justify-content: center;
       width: 100%;
       text-align: center;
-      padding: 2rem 0;
+      height: 6.5rem;
     }
 
     &:hover {
       color: $color-white;
+    }
+
+    &:hover .nav__arrow {
+      fill: $color-white;
+    }
+  }
+
+  &__link-talk {
+    color: $color-gray-light;
+    font-size: 1.5rem;
+    border: 1px solid $color-gray-light;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-white;
+    }
+
+    &:hover .nav__arrow-right {
+      fill: $color-white;
+    }
+  }
+
+  &__arrow-right {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-gray-light;
+    transform: rotate(-90deg);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__icon-world {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-gray-light;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      margin-left: 0;
     }
   }
 
@@ -102,22 +170,93 @@
     }
   }
 
-  &__btn {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    line-height: 1;
-    color: $color-lucky;
-    background-color: rgba($color-white, $alpha: 0.74);
-    border: 1px solid transparent;
-    border-radius: 0.6rem;
-    padding: 1.2rem 2.8rem;
+  &__dropdown {
+    list-style: none;
+    background-color: rgba($color-lucky, 0.3);
+    border-top: 2px solid $color-white;
+    width: 24rem;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: -20%;
+    gap: 1.5rem;
+    display: none;
+    flex-direction: column;
+    opacity: 0;
     transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      position: static;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      background-color: #4780fc;
+      width: 100%;
+      display: none;
+    }
+  }
+
+  &__dropdown-link {
+    color: $color-gray;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: $color-white;
+    }
 
     &:hover {
       color: $color-white;
-      background-color: $color-lucky;
-      border: 1px solid $color-white;
     }
+  }
+
+  &__dropdown-btn {
+    display: none;
+    @include breakpoint(md) {
+      display: flex;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 6.3rem;
+      width: 5rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999999;
+    }
+  }
+
+  &__arrow {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-gray-light;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  &__arrow-btn {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $color-gray;
+    transition: all 0.3s ease-in-out;
+    display: none;
+
+    @include breakpoint(md) {
+      display: block;
+    }
+  }
+
+  &__svg-active {
+    fill: $color-white;
   }
 
   &__logo-box {
@@ -137,5 +276,117 @@
       left: 5%;
       width: 100%;
     }
+  }
+
+  // Dropdown-2 Language
+
+  &__item-2 {
+    list-style: none;
+    position: relative;
+    margin-left: 2rem;
+
+    @include breakpoint(md) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &:hover .nav__dropdown-2 {
+      opacity: 1;
+      display: flex;
+
+      @include breakpoint(md) {
+        opacity: unset;
+        display: none;
+      }
+    }
+
+    &:hover .nav__link-2 {
+      background-color: $color-white;
+
+      @include breakpoint(md) {
+        background-color: #4780fc;
+      }
+    }
+
+    &:hover .nav__icon-world {
+      fill: $color-lucky;
+
+      @include breakpoint(md) {
+        fill: $color-white;
+      }
+    }
+  }
+
+  &__link-2 {
+    padding: 0.5rem 1.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__dropdown-2 {
+    list-style: none;
+    background-color: $color-white;
+    padding: 1rem;
+    position: absolute;
+    top: 140%;
+    right: 0;
+    gap: 3rem;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      position: static;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      background-color: #4780fc;
+      width: 100%;
+      display: none;
+      justify-content: center;
+      gap: 5rem;
+    }
+  }
+
+  &__dropdown-link-2 {
+    color: $color-gray;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: $color-white;
+    }
+
+    &:hover {
+      color: $color-lucky;
+    }
+  }
+
+  &__dropdown-btn-2 {
+    display: none;
+    @include breakpoint(md) {
+      display: flex;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3.9rem;
+      width: 5rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999999;
+    }
+  }
+
+  &__show {
+    display: flex !important;
+    opacity: 1;
   }
 }
